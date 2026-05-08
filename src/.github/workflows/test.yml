@@ -1,0 +1,12 @@
+name: Learn github actions
+
+on:
+    push:
+        branches: 
+            - main
+        
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "This is due some one pushed code on main branch"
