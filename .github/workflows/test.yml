@@ -1,27 +1,17 @@
-name: Learn github actions
+name: Nodejs setup
 
 on: push
 
-jobs:
-    test-linux-commands:
-        runs-on: ubuntu-latest
+jobs: 
+  nodejs-practice:
+    runs-on: ubuntu-latest
 
-        steps:
-            - name: Run Linux Commands
-              run: |
-                echo "current working directory"
-                pwd
+    steps:
+      - name: Before checkout
+        run: ls
 
-                echo "current user"
-                whoami
+      - name: Checkout code
+        uses: actions/checout@v4
 
-                echo "current date"
-                date
-
-                mkdir test-folder
-
-                echo "hello from github actions" > test-folder/hello.txt
-
-                echo "file content"
-                cat test-folder/hello.txt
-            
+      - name: After checkout
+        run: ls
