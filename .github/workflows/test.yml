@@ -9,8 +9,19 @@ jobs:
         steps:
             - name: Run Linux Commands
               run: |
+                echo "current working directory"
                 pwd
-                ls
+
+                echo "current user"
                 whoami
-                date
+
+                echo "current data"
+                data
+
+                mkdir test-folder
+
+                echo "hello from github actions" > test-folder/hello.txt
+
+                echo "file content"
+                cat test-folder/hello.txt
             
