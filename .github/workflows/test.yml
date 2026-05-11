@@ -15,8 +15,8 @@ jobs:
                 echo "current user"
                 whoami
 
-                echo "current data"
-                data
+                echo "current date"
+                date
 
                 mkdir test-folder
 
